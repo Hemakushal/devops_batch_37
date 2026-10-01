@@ -8,7 +8,7 @@ pipeline{
 		      }
 	        stage('convert the source code to executable code'){
                     steps{
-                        build: 'java_code'
+                        build job: 'java_code'
 		    }
 		  }
                 stage('test the code'){
