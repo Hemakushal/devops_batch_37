@@ -1,6 +1,6 @@
 pipeline{
       agent any
-           steges{
+           stages{
 		stage('fetch the code from Url'){
 		    step{
 			git branch: 'master' , url: 'https://github.com/Hemakushal/devops_batch_37.git'
