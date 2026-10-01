@@ -2,22 +2,22 @@ pipeline{
       agent any
            stages{
 		stage('fetch the code from Url'){
-		    step{
+		    steps{
 			git branch: 'master' , url: 'https://github.com/Hemakushal/devops_batch_37.git'
 			}
 		      }
 	        stage('convert the source code to executable code'){
-                    step{
+                    steps{
                         build: java_code
 		    }
 		  }
                 stage('test the code'){
-                    step{
+                    steps{
                       echo "this is test code"
 		    }
 		  }
 		stage('Deploy the code'){
-                    step{
+                    steps{
                        echo "this code is deployed"
 		    }
 		  }
