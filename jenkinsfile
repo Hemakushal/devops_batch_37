@@ -1,0 +1,25 @@
+pipeline{
+      agent any
+           steges{
+		stage('fetch the code from Url'){
+		    step{
+			git branch: 'master' , url: 'https://github.com/Hemakushal/devops_batch_37.git'
+			}
+		      }
+	        stage('convert the source code to executable code'){
+                    step{
+                        build: java_code
+		    }
+		  }
+                stage('test the code'){
+                    step{
+                      echo "this is test code"
+		    }
+		  }
+		stage('Deploy the code'){
+                    step{
+                       echo "this code is deployed"
+		    }
+		  }
+	        }
+	      }
